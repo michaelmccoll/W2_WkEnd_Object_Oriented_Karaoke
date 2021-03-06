@@ -24,15 +24,11 @@ class TestRoom(unittest.TestCase):
         self.room3.check_out(guest4.guest_name)
         self.assertEqual(0, self.room3.count_guests_in_room())
 
-
+    def test_add_songs_to_rooms(self):
+        song7 = Song("Whatever","Oasis")
+        self.room1.add_song_to_room(song7.song_name)
+        self.assertEqual(["Whatever"],self.room1.song_list)
 
     # def test_count_guests_in_room(self):
     #     guest_list_total = self.room3.count_guests_in_room(self.room3)
     #     self.assertEqual(1,guest_list_total)
-
-    
-    # def tes_check_out(self):
-    # remove guest from guest_list[]
-
-    # def test_add_songs_to_rooms(self):
-    # add songs to song_list[]
