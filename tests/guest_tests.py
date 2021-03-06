@@ -17,3 +17,8 @@ class TestGuest(unittest.TestCase):
     def test_guest_list(self):                                          # Tests it can create a guest list and get guests names
         guest_list = [self.guest1.guest_name,self.guest2.guest_name,self.guest3.guest_name]
         self.assertEqual(["Michael McColl","John Smith","Lisa Jones"],guest_list)
+    
+# EXTENTION
+    # def test_reduce_wallet(self):
+    #     self.guest.reduce_wallet(10)
+    #     self.assertEqual(90, self.guest.wallet)

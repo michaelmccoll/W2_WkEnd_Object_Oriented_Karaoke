@@ -3,3 +3,7 @@ class Guest:
         self.guest_name = guest_name
         self.fav_song = fav_song
     
+
+# EXTENTION
+    # def reduce_wallet(self,amount):
+    #     self.wallet -= amount
