@@ -11,8 +11,8 @@ class TestSong(unittest.TestCase):
         self.song5 = Song("Help","The Beatles")
         self.song6 = Song("Beat It","Michael Jackson")
 
-        self.song_list = [song1,song2,song3,song4,song5]
+    def test_song_name(self):                                   # Tests it can get songs name
+        self.assertEqual("Help", self.song5.song_name)
 
-    # def test_get_song_list(self):
-
-    #     self.assertEqual("Master Blaster,Under Pressure,One,Sweet Child Of Mine,Help,Beat It",)
+    def test_artist(self):                                      # Tests it can get song artist
+        self.assertEqual("U2", self.song3.artist)
