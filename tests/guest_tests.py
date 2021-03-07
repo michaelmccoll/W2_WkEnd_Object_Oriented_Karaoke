@@ -25,3 +25,13 @@ class TestGuest(unittest.TestCase):
     def test_reduce_wallet(self):
         self.guest3.reduce_wallet(10)
         self.assertEqual(40, self.guest3.wallet)
+
+    # Tests the favourite song of guest1 is on the rooms song_list
+    def test_fav_song_on_list(self):
+        song_list = ["One","Help","Master Blaster"]
+        self.guest1.fav_song_on_list(song_list)
+        # self.assertEqual("Whoohoo",)   * I wasn't too sure how to test a terminal print using assertEqual, however I've validated function works in terminal
+
+    def test_fav_song_not_on_list(self):
+        song_list = ["One","Help","Master Blaster"]
+        self.guest3.fav_song_on_list(song_list)

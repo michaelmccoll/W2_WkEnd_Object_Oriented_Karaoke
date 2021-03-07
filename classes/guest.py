@@ -6,3 +6,6 @@ class Guest:
     
     def reduce_wallet(self,amount):
         self.wallet -= amount
+
+    def fav_song_on_list(self,song_list):
+        return [print("Whoohoo") for song in song_list if song == self.fav_song] 
