@@ -18,11 +18,11 @@ class Room:
     def add_song_to_room(self,song_name):
         self.song_list.append(song_name)
 
-    def check_in_advanced(self,guest_name):
-        if len(self.guest_list) < self.capacity:
-            return "Room too full, try another"
-        if guest.wallet < fee:
-            return "You do not have enough money to pay fee"
-        guest.reduce_wallet(fee)
-        self.guest_list.append(guest_name)
+    def check_in_advanced(self,guest):
+        if len(self.guest_list) > self.capacity:
+            return print("Room now full, try another")
+        if guest.wallet < self.fee:
+            return print("You do not have enough money to pay fee")
+        guest.reduce_wallet(self.fee)
+        self.guest_list.append(guest.guest_name)
         self.capacity -= 1
