@@ -38,6 +38,10 @@ class TestRoom(unittest.TestCase):
         self.room1.add_song_to_room(song7.song_name)
         self.assertEqual(["Whatever"],self.room1.song_list)
 
+    def test_fee_transaction(self):
+        self.room3.fee_transaction(self.room3.fee)
+        self.assertEqual(5, self.room3.till)
+
     # Tests the advanced check in function, checks the guest_list if correct
     def test_check_in_advanced_enough_capacity(self):
         self.room3.check_in_advanced(self.guest1)
@@ -65,3 +69,4 @@ class TestRoom(unittest.TestCase):
         self.assertEqual(3,self.guest4.wallet)
         self.assertEqual(45,self.guest3.wallet)
         self.assertEqual(75,self.guest2.wallet)
+        self.assertEqual(10,self.room3.till)
